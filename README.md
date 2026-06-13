@@ -5,6 +5,16 @@ inspired by Arc/Zen's `Ctrl+Tab`. Hold the shortcut modifier and tap to cycle
 through your recent tabs as a centered row of cards; release to switch. A quick
 tap toggles the two most recent tabs.
 
+## Screenshots
+
+![Switcher with tab previews](docs/screenshots/with-previews.jpg)
+
+_Previews on — each card shows a screenshot of the tab._
+
+![Switcher with favicons](docs/screenshots/favicons.jpg)
+
+_Default — favicon and title._
+
 ## Install (load unpacked)
 
 1. Open `edge://extensions` (or `chrome://extensions`).
