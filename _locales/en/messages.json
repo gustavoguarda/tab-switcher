@@ -1,0 +1,20 @@
+{
+  "extDesc": { "message": "MRU tab switcher — hold to cycle recent tabs, release to switch." },
+  "cmdOpen": { "message": "Open the recent-tabs switcher (or advance forward)" },
+  "cmdBack": { "message": "Cycle backward / open at last card — set your own key in the shortcuts page" },
+  "optTitle": { "message": "Tab Switcher — options" },
+  "optCardCount": { "message": "Number of cards in the switcher (4–9)" },
+  "optThumbs": { "message": "Tab previews (show a screenshot of each tab)" },
+  "optThumbsNote": { "message": "Previews are captured as you visit each tab (they don't work on internal pages like edge:// or New Tab)." },
+  "optCtrlTab": { "message": "<strong>Optional:</strong> bind the literal <code>Ctrl+Tab</code>. See the project README — note it disables the browser's native Ctrl+Tab tab cycling." },
+  "optOverrideTitle": { "message": "Force <code>Cmd+Shift+E</code> for \"back\" (advanced)" },
+  "optOverrideDesc": { "message": "Edge reserves <code>Cmd+Shift+E</code> (Bing/Copilot sidebar). You can force the extension's \"back\" command onto it with the snippet below. It's per-install and may reset on updates; reversible at <code>edge://extensions/shortcuts</code>." },
+  "optStep1": { "message": "Open <code>edge://extensions</code> and turn on <strong>Developer mode</strong>." },
+  "optStep2": { "message": "Open DevTools on that page (<code>Cmd+Opt+I</code>) and go to the <strong>Console</strong>." },
+  "optStep3": { "message": "Paste the command below and press Enter:" },
+  "btnCopy": { "message": "Copy" },
+  "loading": { "message": "loading…" },
+  "statusSaved": { "message": "Saved" },
+  "copyDone": { "message": "Copied!" },
+  "copyFail": { "message": "Couldn't copy — select and copy manually." }
+}

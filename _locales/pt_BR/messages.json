@@ -1,0 +1,20 @@
+{
+  "extDesc": { "message": "Trocador de abas por uso recente — segure para percorrer as abas recentes, solte para trocar." },
+  "cmdOpen": { "message": "Abrir o switcher de abas recentes (ou avançar)" },
+  "cmdBack": { "message": "Voltar / abrir no último card — defina sua tecla na página de atalhos" },
+  "optTitle": { "message": "Tab Switcher — opções" },
+  "optCardCount": { "message": "Número de cards no switcher (4–9)" },
+  "optThumbs": { "message": "Prévias das abas (mostra um screenshot de cada aba)" },
+  "optThumbsNote": { "message": "As prévias são capturadas quando você visita cada aba (não funcionam em páginas internas como edge:// ou Nova Aba)." },
+  "optCtrlTab": { "message": "<strong>Opcional:</strong> vincular o <code>Ctrl+Tab</code> literal. Veja o README do projeto — note que isso desativa o ciclo de abas nativo do Ctrl+Tab." },
+  "optOverrideTitle": { "message": "Forçar <code>Cmd+Shift+E</code> para \"voltar\" (avançado)" },
+  "optOverrideDesc": { "message": "O Edge reserva o <code>Cmd+Shift+E</code> (Bing/Copilot na sidebar). Dá para forçar o comando \"voltar\" da extensão nessa tecla com o snippet abaixo. É por instalação e pode resetar em atualizações; reversível em <code>edge://extensions/shortcuts</code>." },
+  "optStep1": { "message": "Abra <code>edge://extensions</code> e ligue o <strong>Modo de desenvolvedor</strong>." },
+  "optStep2": { "message": "Abra o DevTools nessa página (<code>Cmd+Opt+I</code>) e vá no <strong>Console</strong>." },
+  "optStep3": { "message": "Cole o comando abaixo e tecle Enter:" },
+  "btnCopy": { "message": "Copiar" },
+  "loading": { "message": "carregando…" },
+  "statusSaved": { "message": "Salvo" },
+  "copyDone": { "message": "Copiado!" },
+  "copyFail": { "message": "Não consegui copiar — selecione e copie manualmente." }
+}

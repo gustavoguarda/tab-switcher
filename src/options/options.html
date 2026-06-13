@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tab Switcher — options</title>
+    <style>
+      body { font: 14px system-ui, sans-serif; padding: 24px; max-width: 560px; }
+      label { display: block; margin-bottom: 8px; font-weight: 600; }
+      .row { margin-bottom: 24px; }
+      code { background: #f0f0f0; padding: 1px 5px; border-radius: 4px; }
+      #status { color: #2a7; height: 1em; }
+      hr { border: none; border-top: 1px solid #e3e3e3; margin: 28px 0; }
+      h2 { font-size: 15px; margin: 0 0 6px; }
+      .muted { color: #666; }
+      ol { padding-left: 20px; line-height: 1.6; }
+      .codebox {
+        display: flex; align-items: flex-start; gap: 8px;
+        margin: 10px 0;
+      }
+      pre {
+        flex: 1; margin: 0; background: #1f1f23; color: #eaeaea;
+        padding: 12px 14px; border-radius: 8px; overflow-x: auto;
+        font: 12px/1.5 ui-monospace, "SF Mono", Menlo, monospace;
+        white-space: pre; tab-size: 2;
+      }
+      button {
+        font: 13px system-ui, sans-serif; padding: 8px 14px;
+        border: 1px solid #c8c8c8; border-radius: 8px; background: #fafafa;
+        cursor: pointer; white-space: nowrap;
+      }
+      button:hover { background: #f0f0f0; }
+      #copyStatus { color: #2a7; font-size: 13px; height: 1em; display: block; }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <label for="cardCount" data-i18n="optCardCount">Number of cards in the switcher (4–9)</label>
+      <input id="cardCount" type="number" min="4" max="9" step="1" />
+      <span id="status"></span>
+    </div>
+    <div class="row">
+      <label>
+        <input id="thumbnails" type="checkbox" />
+        <span data-i18n="optThumbs">Tab previews (show a screenshot of each tab)</span>
+      </label>
+      <p class="muted" style="margin: 4px 0 0; font-size: 13px;" data-i18n="optThumbsNote">
+        Previews are captured as you visit each tab (they don't work on internal
+        pages like edge:// or New Tab).
+      </p>
+    </div>
+    <!-- Advanced overrides: shown only on unpacked/dev installs (hidden in the
+         published build, since it instructs running a developerPrivate snippet). -->
+    <div id="advancedSection" hidden>
+      <hr />
+
+      <div class="row">
+        <p data-i18n-html="optCtrlTab"><strong>Optional:</strong> bind the literal
+        <code>Ctrl+Tab</code>. See the project README — note it disables the
+        browser's native Ctrl+Tab tab cycling.</p>
+      </div>
+
+      <div class="row">
+        <h2 data-i18n-html="optOverrideTitle">Force <code>Cmd+Shift+E</code> for "back" (advanced)</h2>
+        <p class="muted" data-i18n-html="optOverrideDesc">
+          Edge reserves <code>Cmd+Shift+E</code> (Bing/Copilot sidebar). You can
+          force the extension's "back" command onto it with the snippet below.
+        </p>
+        <ol>
+          <li data-i18n-html="optStep1">Open <code>edge://extensions</code> and turn on <strong>Developer mode</strong>.</li>
+          <li data-i18n-html="optStep2">Open DevTools on that page (<code>Cmd+Opt+I</code>) and go to the <strong>Console</strong>.</li>
+          <li data-i18n-html="optStep3">Paste the command below and press Enter:</li>
+        </ol>
+        <div class="codebox">
+          <pre id="overrideCode" data-i18n="loading">loading…</pre>
+          <button id="copyBtn" type="button" data-i18n="btnCopy">Copy</button>
+        </div>
+        <span id="copyStatus"></span>
+      </div>
+    </div>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

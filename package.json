@@ -1,0 +1,14 @@
+{
+  "name": "tab-switcher",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "bash scripts/build-zip.sh"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}
