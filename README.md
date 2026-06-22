@@ -30,8 +30,12 @@ _Default — favicon and title._
 - **Cycle back** (no default key — see below) — opens preselecting the last card,
   and while open **advances backward**.
 - **Release the held modifier** (`Cmd` / `Alt`) to switch to the selected tab.
-- `Tab` / `Shift+Tab` and the arrow keys also move the selection; **`Esc`**
-  cancels; **clicking** a card (or the dim backdrop) commits/cancels.
+- With the switcher open, the **arrow keys** move the selection in either
+  direction (`→` forward, `←` back) — keep the modifier held and tap an arrow.
+  This is the reliable way to go *back*, no extra shortcut needed. (`Tab` /
+  `Shift+Tab` also move the selection, but the browser/OS often intercepts `Tab`
+  while a modifier is held, so prefer the arrows.) **`Esc`** cancels; **clicking**
+  a card (or the dim backdrop) commits/cancels.
 
 The MRU order is per window. The number of cards is configurable (4–9, default 6)
 on the **Options** page, where you can also turn on tab **previews**.
@@ -50,7 +54,10 @@ Defaults:
 
 - **Open / cycle forward** — macOS `Cmd+E`, Windows/Linux `Alt+Q`.
 - **Cycle back** — *no default* (the natural `Cmd+Shift+E` is reserved by Edge's
-  sidebar). Assign your own key at `edge://extensions/shortcuts`.
+  sidebar). **You don't need a key for this:** with the switcher open, hold the
+  modifier and tap the **arrow keys** (`←` / `→`) to move in either direction.
+  Assign your own key at `edge://extensions/shortcuts` only if you want a
+  dedicated reverse shortcut.
 
 ### Forcing `Cmd+Shift+E` for "cycle back"
 
