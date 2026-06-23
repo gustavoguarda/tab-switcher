@@ -191,7 +191,11 @@ async function openSwitcher(startDir) {
   // Render the switcher on the most-recent WEB tab instead: activate it and
   // show the modal there, preselected on itself — so a quick release lands on
   // your previous tab, and holding lets you cycle visually.
-  const hostId = ids.find((id) => isWebUrl(urlById[id] || ""));
+  // Skip the active tab itself: we only reached this fall-through because it
+  // failed to host the modal (sendMessage AND executeScript both threw). On the
+  // Edge/Chrome web store the page is https but content scripts are blocked by
+  // browser policy, so without this it would re-pick itself as host and fail.
+  const hostId = ids.find((id) => id !== originTabId && isWebUrl(urlById[id] || ""));
   if (hostId != null) {
     const hostIndex = cards.findIndex((c) => c.id === hostId);
     try {

@@ -40,13 +40,23 @@ _Default — favicon and title._
 The MRU order is per window. The number of cards is configurable (4–9, default 6)
 on the **Options** page, where you can also turn on tab **previews**.
 
-### On internal pages
+### On internal and restricted pages
 
 The overlay is drawn inside the page, so it can't appear on pages where content
-scripts don't run (`edge://*`, the New Tab page, the web store, the PDF viewer,
-error pages). Pressing the shortcut there **switches to your most-recent web tab
-and opens the switcher on it**, so you can still cycle; if no web tab is open it
-just jumps to your previous tab.
+scripts don't run (`edge://*`, the New Tab page, the PDF viewer, error pages).
+Pressing the shortcut there **switches to your most-recent web tab and opens the
+switcher on it**, so you can still cycle; if no web tab is open it just jumps to
+your previous tab.
+
+**The add-ons store counts as one of these pages**, even though it looks like a
+normal site. Edge (like Chrome) hard-blocks *every* extension from running on its
+own extensions gallery — `microsoftedge.microsoft.com/addons` in Edge,
+`chromewebstore.google.com` in Chrome — as an anti-abuse measure (so extensions
+can't fake their own reviews, ratings, or install clicks). The browser rejects
+injection there with `"The extensions gallery cannot be scripted"`. No permission
+or manifest setting can override this, so the switcher falls back to the
+most-recent web tab there too. This is the one normal-looking site where the
+in-page modal can't be shown.
 
 ## Shortcuts
 
